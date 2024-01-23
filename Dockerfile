@@ -11,8 +11,8 @@ RUN docker-php-ext-install mysqli
 RUN a2enmod rewrite
 
 # Change document root to /var/www/html
-RUN sed -i 's/\/var\/www\/html/\/var\/www\/html\/public/g' /etc/apache2/sites-available/000-default.conf
-RUN sed -i 's/\/var\/www\/html/\/var\/www\/html\/public/g' /etc/apache2/sites-enabled/000-default.conf
+RUN sed -i 's/\/var\/www\/html/\/var\/www\/html/g' /etc/apache2/sites-available/000-default.conf
+RUN sed -i 's/\/var\/www\/html/\/var\/www\/html/g' /etc/apache2/sites-enabled/000-default.conf
 
 # Expose port 80
 EXPOSE 80
